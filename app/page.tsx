@@ -6,6 +6,7 @@ import { FeaturedVillasSection } from '@/components/landing/featured-villas'
 import { PopularOrganizersSection } from '@/components/landing/popular-organizers'
 import { CategoriesSection } from '@/components/landing/categories-section'
 import { TestimonialsSection } from '@/components/landing/testimonials-section'
+import { StatisticsSection } from '@/components/landing/statistics-section'
 import { CTASection } from '@/components/landing/cta-section'
 import { DownloadAppSection } from '@/components/landing/download-app-section'
 
@@ -19,6 +20,7 @@ export default function HomePage() {
         <CategoriesSection />
         <FeaturedVillasSection />
         <PopularOrganizersSection />
+        <StatisticsSection />
         <TestimonialsSection />
         <CTASection />
         <DownloadAppSection />

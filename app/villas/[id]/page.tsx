@@ -174,7 +174,7 @@ export default function VillaDetailsPage() {
               <Separator />
 
               {/* Host Info */}
-              <div className="flex items-center gap-4">
+              <Link href="/host/1" className="flex items-center gap-4 hover:opacity-90 transition-opacity">
                 <Avatar className="h-14 w-14">
                   <AvatarImage src={villa.host.image} />
                   <AvatarFallback>{villa.host.name[0]}</AvatarFallback>
@@ -193,7 +193,7 @@ export default function VillaDetailsPage() {
                     {villa.host.listings} listings - Hosting since {villa.host.joined}
                   </p>
                 </div>
-              </div>
+              </Link>
 
               <Separator />
 
@@ -318,10 +318,12 @@ export default function VillaDetailsPage() {
                     </div>
                   </div>
 
-                  <Button className="w-full h-12 text-base font-semibold cameroon-gradient text-primary-foreground mb-4">
-                    <Calendar className="h-5 w-5 mr-2" />
-                    Check Availability
-                  </Button>
+                  <Link href="/booking/villa?villaId=1">
+                    <Button className="w-full h-12 text-base font-semibold cameroon-gradient text-primary-foreground mb-4">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      Reserve now
+                    </Button>
+                  </Link>
 
                   <p className="text-center text-sm text-muted-foreground mb-6">
                     You won&apos;t be charged yet
@@ -353,10 +355,12 @@ export default function VillaDetailsPage() {
                 <div className="mt-4 p-4 bg-secondary/50 rounded-xl">
                   <h3 className="font-medium mb-3">Contact Host</h3>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      Message
-                    </Button>
+                    <Link href="/messages" className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
+                        <MessageCircle className="h-4 w-4 mr-2" />
+                        Message
+                      </Button>
+                    </Link>
                     <Button variant="outline" size="sm" className="flex-1">
                       <Phone className="h-4 w-4 mr-2" />
                       Call

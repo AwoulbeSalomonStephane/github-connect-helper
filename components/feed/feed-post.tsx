@@ -28,6 +28,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
+import { CommentsSheet } from '@/components/feed/comments-sheet'
 
 export interface FeedPost {
   id: string
@@ -227,6 +228,7 @@ export function FeedPostCard({ post, index }: { post: FeedPost; index: number })
   const [isSaved, setIsSaved] = useState(post.isSaved)
   const [likes, setLikes] = useState(post.engagement.likes)
   const [isMuted, setIsMuted] = useState(true)
+  const [commentsOpen, setCommentsOpen] = useState(false)
 
   const handleLike = () => {
     setIsLiked(!isLiked)
@@ -372,7 +374,11 @@ export function FeedPostCard({ post, index }: { post: FeedPost; index: number })
             />
             <span>{formatNumber(likes)}</span>
           </button>
-          <button className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+          <button
+            type="button"
+            onClick={() => setCommentsOpen(true)}
+            className="flex items-center gap-2 text-sm hover:text-primary transition-colors"
+          >
             <MessageCircle className="h-6 w-6" />
             <span>{formatNumber(post.engagement.comments)}</span>
           </button>
@@ -393,6 +399,12 @@ export function FeedPostCard({ post, index }: { post: FeedPost; index: number })
           />
         </button>
       </div>
+
+      <CommentsSheet
+        open={commentsOpen}
+        onOpenChange={setCommentsOpen}
+        postTitle={post.content.event?.title || post.content.villa?.name}
+      />
     </motion.article>
   )
 }

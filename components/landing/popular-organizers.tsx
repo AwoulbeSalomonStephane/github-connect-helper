@@ -74,7 +74,7 @@ export function OrganizerCard({ organizer, index }: { organizer: typeof popularO
       viewport={{ once: true }}
       className="group"
     >
-      <Link href={`/organizers/${organizer.id}`}>
+      <Link href={`/organizer/${organizer.id}`}>
         <div className="relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
           {/* Cover Image */}
           <div className="relative h-24 overflow-hidden">

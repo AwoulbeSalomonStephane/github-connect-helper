@@ -217,11 +217,21 @@ function ImageGallery({ images }: { images: string[] }) {
 
 function TicketPurchaseModal() {
   const [selectedTickets, setSelectedTickets] = useState<Record<string, number>>({})
-  
+
   const total = Object.entries(selectedTickets).reduce((sum, [ticketId, qty]) => {
-    const ticket = event.ticketTypes.find(t => t.id === ticketId)
+    const ticket = event.ticketTypes.find((t) => t.id === ticketId)
     return sum + (ticket?.price || 0) * qty
   }, 0)
+
+  const totalQty = Object.values(selectedTickets).reduce((a, b) => a + b, 0)
+  const primaryEntry = Object.entries(selectedTickets).find(([, qty]) => qty > 0)
+  const primaryTicket = primaryEntry
+    ? event.ticketTypes.find((t) => t.id === primaryEntry[0])
+    : null
+  const checkoutHref =
+    primaryTicket && totalQty > 0
+      ? `/checkout/event?eventId=${event.id}&qty=${totalQty}&ticket=${encodeURIComponent(primaryTicket.name)}&price=${primaryTicket.price}`
+      : '#'
 
   const updateQuantity = (ticketId: string, delta: number) => {
     setSelectedTickets(prev => {
@@ -309,9 +319,11 @@ function TicketPurchaseModal() {
               <span className="text-muted-foreground">Total</span>
               <span className="text-2xl font-bold">{formatPrice(total)}</span>
             </div>
-            <Button size="lg" className="w-full">
-              Proceed to Checkout
-            </Button>
+            <Link href={checkoutHref}>
+              <Button size="lg" className="w-full" disabled={!primaryTicket}>
+                Proceed to Checkout
+              </Button>
+            </Link>
           </>
         )}
       </DialogContent>
@@ -369,7 +381,7 @@ export default function EventDetailsPage() {
 
               {/* Organizer */}
               <div className="flex items-center justify-between p-4 rounded-xl bg-card border border-border">
-                <Link href={`/organizers/${event.organizer.id}`} className="flex items-center gap-4">
+                <Link href={`/organizer/${event.organizer.id}`} className="flex items-center gap-4">
                   <Avatar className="h-14 w-14 border-2 border-primary/20">
                     <AvatarImage src={event.organizer.avatar} />
                     <AvatarFallback>{event.organizer.name[0]}</AvatarFallback>
