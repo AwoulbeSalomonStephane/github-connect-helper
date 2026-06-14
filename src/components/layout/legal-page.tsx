@@ -1,4 +1,4 @@
-import Link from '@tanstack/react-router'
+import { Link } from '@/components/compat/link'
 import { Navbar, MobileNav } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { Button } from '@/components/ui/button'

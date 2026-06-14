@@ -1,6 +1,6 @@
 
 
-import Link from '@tanstack/react-router'
+import { Link } from '@/components/compat/link'
 import Image from '@/components/compat/next-image'
 import { motion } from 'framer-motion'
 import { Calendar, MapPin, Users, Heart, ArrowRight, Ticket } from 'lucide-react'

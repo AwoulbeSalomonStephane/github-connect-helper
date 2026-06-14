@@ -12,7 +12,7 @@ import {
   MapPin,
   Users,
 } from 'lucide-react'
-import Link from '@tanstack/react-router'
+import { Link } from '@/components/compat/link'
 
 const categories = [
   {

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Building2, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import Link from '@tanstack/react-router'
+import { Link } from '@/components/compat/link'
 
 export function CTASection() {
   return (

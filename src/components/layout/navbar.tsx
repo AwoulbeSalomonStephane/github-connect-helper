@@ -1,7 +1,7 @@
 
 
-import Link from '@tanstack/react-router'
-import { usePathname } from '@tanstack/react-router'
+import { Link } from '@/components/compat/link'
+import { usePathname } from '@/components/compat/router'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
