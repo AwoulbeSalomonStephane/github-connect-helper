@@ -47,6 +47,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
     ],
   }),
   shellComponent: RootShell,
+  component: () => <Outlet />,
   notFoundComponent: () => (
     <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
       <div className="text-center">
@@ -77,8 +78,3 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function App() {
-  return <Outlet />;
-}
-
-(Route as unknown as { options: { component: typeof App } }).options.component = App;
