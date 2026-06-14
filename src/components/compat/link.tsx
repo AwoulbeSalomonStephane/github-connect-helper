@@ -9,8 +9,7 @@ type Props = Omit<ComponentProps<typeof TSLink>, 'to'> & {
 
 export function Link({ href, to, ...rest }: Props) {
   const target = (to ?? href ?? '/') as string;
-  // @ts-expect-error — runtime accepts string, TS wants the typed routes union
-  return <TSLink to={target} {...rest} />;
+  return <TSLink to={target as never} {...rest} />;
 }
 
 export default Link;
