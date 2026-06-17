@@ -1,0 +1,80 @@
+import type { AppTranslations } from './en';
+
+const ar: AppTranslations = {
+  brand: { name: 'VibeCam', tagline: 'فعاليات وفيلات وتجارب في الكاميرون' },
+  nav: {
+    home: 'الرئيسية', feed: 'التغذية', events: 'الفعاليات', villas: 'الفيلات',
+    experiences: 'التجارب', organizers: 'المنظمون', search: 'بحث',
+    notifications: 'الإشعارات', profile: 'الملف الشخصي', settings: 'الإعدادات',
+    login: 'تسجيل الدخول', signup: 'إنشاء حساب', logout: 'تسجيل الخروج',
+    dashboard: 'لوحة التحكم', menu: 'القائمة', language: 'اللغة',
+  },
+  common: {
+    loading: 'جارٍ التحميل…', save: 'حفظ', cancel: 'إلغاء', delete: 'حذف',
+    edit: 'تعديل', create: 'إنشاء', submit: 'إرسال', back: 'رجوع', next: 'التالي',
+    yes: 'نعم', no: 'لا', confirm: 'تأكيد', search: 'بحث', filter: 'تصفية',
+    sort: 'ترتيب', all: 'الكل', none: 'لا شيء', error: 'حدث خطأ ما',
+    success: 'تم بنجاح', required: 'مطلوب', optional: 'اختياري', seeAll: 'عرض الكل',
+    learnMore: 'اعرف أكثر', getStarted: 'ابدأ الآن', comingSoon: 'قريبًا',
+    free: 'مجاني', perNight: 'لكل ليلة', from: 'من', to: 'إلى',
+  },
+  cities: {
+    yaounde: 'ياوندي', douala: 'دوالا', bafoussam: 'بافوسام', limbe: 'ليمبي',
+    kribi: 'كريبي', buea: 'بويا', bamenda: 'بامندا', garoua: 'غاروا',
+  },
+  hero: {
+    title: 'اكتشف الحياة الليلية والحفلات في الكاميرون',
+    subtitle: 'فعاليات راقية وفيلات فاخرة وتجارب لا تُنسى في ياوندي ودوالا وكريبي وأكثر.',
+    cta: 'استكشف الفعاليات', secondary: 'أعلن عن فيلتك',
+    searchPlaceholder: 'ابحث عن فعاليات، فيلات، مدن…',
+  },
+  events: {
+    title: 'الفعاليات', upcoming: 'الفعاليات القادمة', trending: 'الأكثر رواجًا',
+    featured: 'فعاليات مميزة', near: 'فعاليات قريبة منك',
+    empty: 'لا توجد فعاليات — كن أول من ينشر واحدة.',
+    ticketsLeft: 'بقي {{count}} تذكرة', ticketsLeft_one: 'بقيت تذكرة واحدة',
+    soldOut: 'نفدت التذاكر', buyTicket: 'شراء تذكرة', viewDetails: 'عرض التفاصيل',
+    category: 'الفئة', date: 'التاريخ', price: 'السعر', city: 'المدينة',
+    organizer: 'المنظم', venue: 'المكان', addToCalendar: 'أضف إلى التقويم',
+    share: 'مشاركة', save: 'حفظ', saved: 'محفوظ',
+  },
+  villas: {
+    title: 'الفيلات', featured: 'فيلات مميزة', book: 'احجز',
+    capacity: 'حتى {{count}} ضيوف', bedrooms: '{{count}} غرف نوم',
+    bedrooms_one: 'غرفة نوم واحدة', amenities: 'المرافق', availability: 'الإتاحة',
+    checkIn: 'الوصول', checkOut: 'المغادرة', guests: 'الضيوف',
+    nights: '{{count}} ليالٍ', nights_one: 'ليلة واحدة', total: 'الإجمالي',
+    bookRequest: 'طلب حجز',
+  },
+  auth: {
+    welcome: 'مرحبًا بك في VibeCam', welcomeBack: 'مرحبًا بعودتك',
+    signInToContinue: 'سجل الدخول للمتابعة', createAccount: 'أنشئ حسابك',
+    email: 'البريد الإلكتروني', password: 'كلمة المرور', confirmPassword: 'تأكيد كلمة المرور',
+    displayName: 'اسم العرض', forgotPassword: 'نسيت كلمة المرور؟',
+    noAccount: 'ليس لديك حساب؟', hasAccount: 'لديك حساب بالفعل؟',
+    signInGoogle: 'المتابعة مع جوجل', or: 'أو', signingIn: 'جارٍ تسجيل الدخول…',
+    signingUp: 'جارٍ إنشاء الحساب…', signedIn: 'تم تسجيل الدخول', signedOut: 'تم تسجيل الخروج',
+    signUpSuccess: 'تم إنشاء الحساب — تحقق من بريدك للتأكيد.',
+    invalidCredentials: 'بريد أو كلمة مرور غير صحيحة',
+    passwordsDontMatch: 'كلمات المرور غير متطابقة',
+    passwordTooShort: 'يجب أن تكون كلمة المرور 8 أحرف على الأقل',
+  },
+  roles: {
+    user: 'عضو', organizer: 'منظم فعاليات', villa_owner: 'مالك فيلا',
+    admin: 'مشرف', becomeOrganizer: 'كن منظم فعاليات', listVilla: 'أعلن عن فيلتك',
+  },
+  dashboard: {
+    overview: 'نظرة عامة', myEvents: 'فعالياتي', myVillas: 'فيلاتي',
+    myTickets: 'تذاكري', myBookings: 'حجوزاتي', favorites: 'المفضلة',
+    following: 'المتابَعون', earnings: 'الأرباح', analytics: 'الإحصائيات',
+    attendees: 'الحضور', settings: 'الإعدادات', newEvent: 'فعالية جديدة',
+    newVilla: 'فيلا جديدة',
+  },
+  footer: {
+    rights: '© {{year}} VibeCam. جميع الحقوق محفوظة.', discover: 'اكتشف',
+    company: 'الشركة', legal: 'قانوني', about: 'من نحن', contact: 'تواصل',
+    help: 'مساعدة', privacy: 'الخصوصية', terms: 'الشروط',
+    madeIn: 'صُنع بحب ❤️ في الكاميرون',
+  },
+};
+export default ar;

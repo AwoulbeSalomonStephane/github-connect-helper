@@ -8,6 +8,8 @@ import type { QueryClient } from '@tanstack/react-query';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import { AuthProvider } from '@/hooks/use-auth';
+import '@/i18n';
 import appCss from '@/styles.css?url';
 
 interface RouterContext {
@@ -78,8 +80,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body className="font-sans antialiased bg-background text-foreground">
         <QueryClientProvider client={queryClient}>
           <ThemeProvider>
-            {children}
-            <Toaster richColors position="top-center" />
+            <AuthProvider>
+              {children}
+              <Toaster richColors position="top-center" />
+            </AuthProvider>
           </ThemeProvider>
         </QueryClientProvider>
         <Scripts />

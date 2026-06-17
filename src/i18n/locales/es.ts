@@ -1,0 +1,80 @@
+import type { AppTranslations } from './en';
+
+const es: AppTranslations = {
+  brand: { name: 'VibeCam', tagline: 'Eventos, Villas y Experiencias en Camerún' },
+  nav: {
+    home: 'Inicio', feed: 'Feed', events: 'Eventos', villas: 'Villas',
+    experiences: 'Experiencias', organizers: 'Organizadores', search: 'Buscar',
+    notifications: 'Notificaciones', profile: 'Perfil', settings: 'Ajustes',
+    login: 'Iniciar sesión', signup: 'Registrarse', logout: 'Cerrar sesión',
+    dashboard: 'Panel', menu: 'Menú', language: 'Idioma',
+  },
+  common: {
+    loading: 'Cargando…', save: 'Guardar', cancel: 'Cancelar', delete: 'Eliminar',
+    edit: 'Editar', create: 'Crear', submit: 'Enviar', back: 'Atrás', next: 'Siguiente',
+    yes: 'Sí', no: 'No', confirm: 'Confirmar', search: 'Buscar', filter: 'Filtrar',
+    sort: 'Ordenar', all: 'Todos', none: 'Ninguno', error: 'Algo salió mal',
+    success: 'Éxito', required: 'Requerido', optional: 'Opcional', seeAll: 'Ver todo',
+    learnMore: 'Más información', getStarted: 'Empezar', comingSoon: 'Próximamente',
+    free: 'Gratis', perNight: 'por noche', from: 'desde', to: 'hasta',
+  },
+  cities: {
+    yaounde: 'Yaundé', douala: 'Duala', bafoussam: 'Bafoussam', limbe: 'Limbe',
+    kribi: 'Kribi', buea: 'Buea', bamenda: 'Bamenda', garoua: 'Garoua',
+  },
+  hero: {
+    title: 'Descubre la vida nocturna y las fiestas de Camerún',
+    subtitle: 'Eventos premium, villas de lujo y experiencias inolvidables en Yaundé, Duala, Kribi y más.',
+    cta: 'Explorar eventos', secondary: 'Publica tu villa',
+    searchPlaceholder: 'Buscar eventos, villas, ciudades…',
+  },
+  events: {
+    title: 'Eventos', upcoming: 'Próximos eventos', trending: 'Eventos en tendencia',
+    featured: 'Eventos destacados', near: 'Eventos cerca de ti',
+    empty: 'No hay eventos — sé el primero en publicar uno.',
+    ticketsLeft: '{{count}} entradas restantes', ticketsLeft_one: '{{count}} entrada restante',
+    soldOut: 'Agotado', buyTicket: 'Comprar entrada', viewDetails: 'Ver detalles',
+    category: 'Categoría', date: 'Fecha', price: 'Precio', city: 'Ciudad',
+    organizer: 'Organizador', venue: 'Lugar', addToCalendar: 'Añadir al calendario',
+    share: 'Compartir', save: 'Guardar', saved: 'Guardado',
+  },
+  villas: {
+    title: 'Villas', featured: 'Villas destacadas', book: 'Reservar',
+    capacity: 'Hasta {{count}} huéspedes', bedrooms: '{{count}} habitaciones',
+    bedrooms_one: '{{count}} habitación', amenities: 'Comodidades', availability: 'Disponibilidad',
+    checkIn: 'Entrada', checkOut: 'Salida', guests: 'Huéspedes',
+    nights: '{{count}} noches', nights_one: '{{count}} noche', total: 'Total',
+    bookRequest: 'Solicitar reserva',
+  },
+  auth: {
+    welcome: 'Bienvenido a VibeCam', welcomeBack: 'Bienvenido de nuevo',
+    signInToContinue: 'Inicia sesión para continuar', createAccount: 'Crea tu cuenta',
+    email: 'Email', password: 'Contraseña', confirmPassword: 'Confirmar contraseña',
+    displayName: 'Nombre', forgotPassword: '¿Olvidaste la contraseña?',
+    noAccount: '¿No tienes cuenta?', hasAccount: '¿Ya tienes cuenta?',
+    signInGoogle: 'Continuar con Google', or: 'o', signingIn: 'Iniciando sesión…',
+    signingUp: 'Creando cuenta…', signedIn: 'Sesión iniciada', signedOut: 'Sesión cerrada',
+    signUpSuccess: 'Cuenta creada — revisa tu email para confirmar.',
+    invalidCredentials: 'Email o contraseña inválidos',
+    passwordsDontMatch: 'Las contraseñas no coinciden',
+    passwordTooShort: 'La contraseña debe tener al menos 8 caracteres',
+  },
+  roles: {
+    user: 'Miembro', organizer: 'Organizador', villa_owner: 'Propietario de villa',
+    admin: 'Administrador', becomeOrganizer: 'Conviértete en organizador', listVilla: 'Publica tu villa',
+  },
+  dashboard: {
+    overview: 'Resumen', myEvents: 'Mis eventos', myVillas: 'Mis villas',
+    myTickets: 'Mis entradas', myBookings: 'Mis reservas', favorites: 'Favoritos',
+    following: 'Siguiendo', earnings: 'Ingresos', analytics: 'Analíticas',
+    attendees: 'Asistentes', settings: 'Ajustes', newEvent: 'Nuevo evento',
+    newVilla: 'Nueva villa',
+  },
+  footer: {
+    rights: '© {{year}} VibeCam. Todos los derechos reservados.', discover: 'Descubrir',
+    company: 'Empresa', legal: 'Legal', about: 'Acerca de', contact: 'Contacto',
+    help: 'Ayuda', privacy: 'Privacidad', terms: 'Términos',
+    madeIn: 'Hecho con ❤️ en Camerún',
+  },
+};
+export default es;
