@@ -34,10 +34,12 @@ function EventDetailPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('events')
-        .select('*, ticket_types(*), profiles!events_organizer_id_fkey(display_name, avatar_url, username)')
+        .select('*, ticket_types(*)')
         .eq('id', id).maybeSingle();
       if (error) throw error;
-      return data;
+      if (!data) return null;
+      const { data: org } = await supabase.from('profiles').select('display_name, username, avatar_url').eq('id', data.organizer_id).maybeSingle();
+      return { ...data, organizer: org } as any;
     },
   });
 
@@ -73,7 +75,7 @@ function EventDetailPage() {
   );
 
   const types = (event.ticket_types as any[]) ?? [];
-  const organizer = (event as any).profiles;
+  const organizer = (event as any).organizer;
 
   return (
     <div className="min-h-screen bg-background">
