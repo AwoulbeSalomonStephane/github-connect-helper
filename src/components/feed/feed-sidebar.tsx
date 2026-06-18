@@ -83,7 +83,6 @@ export function FeedSidebar() {
               >
                 <Link
                   to="/search"
-                  search={{ q: topic.tag }}
                   className="block hover:bg-secondary rounded-lg p-2 -mx-2 transition-colors"
                 >
                   <p className="font-medium text-sm text-primary">{topic.tag}</p>
